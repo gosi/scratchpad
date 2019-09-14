@@ -11,6 +11,22 @@ if (localStorage["text"]) {
 // Delete "#list" if present.
 delete localStorage["#list"];
 
+function getTarget() {
+    return target = window.location.hash || "#default";
+}
+
+function save(target) {
+    if (target === "#list") {
+        return;
+    }
+    const textValue = textarea.value.trim();
+    if (textValue === "" || textValue == defaultText.trim()) {
+        delete localStorage[target];
+    } else {
+        localStorage[target] = textarea.value;
+    }
+}
+
 function run() {
     textarea.focus();
     window.onhashchange = function () {
@@ -19,21 +35,6 @@ function run() {
     }
 
     window.current = getTarget();
-    function save(target) {
-        if (target === "#list") {
-            return;
-        }
-        const textValue = textarea.value.trim();
-        if (textValue === "" || textValue == defaultText.trim()) {
-            delete localStorage[target];
-        } else {
-            localStorage[target] = textarea.value;
-        }
-    };
-
-    function getTarget() {
-        return target = window.location.hash || "#default";
-    };
 
     // See if we have capabilities for Local Storage
     if (window.localStorage) {
