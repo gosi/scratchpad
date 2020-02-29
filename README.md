@@ -1,2 +1,1 @@
-A scratch file in your browser that preserves data through Local Storage. Chrome or
-Firefox is recommended.
+A simple text file in your browser that preserves data through Local Storage. Tested on Firefox and Chrome.
