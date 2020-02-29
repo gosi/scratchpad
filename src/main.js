@@ -1,4 +1,5 @@
-const defaultText = ";; This page is for quick notes. They will save and reappear upon closing and opening this file again.";
+const defaultText =
+    "/*\n * This is a text file for quick notes. \n * They will save and reappear upon closing and opening this file again.\n */\n\n";
 const textarea = document.getElementById("textarea");
 const list = document.getElementById("list");
 
