@@ -28,7 +28,7 @@ function save(target) {
   }
 }
 
-function main() {
+function  main() {
   textarea.focus();
   window.onhashchange = function () {
     save(window.current);
